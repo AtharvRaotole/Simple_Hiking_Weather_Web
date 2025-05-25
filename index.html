@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiker's Weather Proto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hiker's Weather Prototype</h1>
+        <p>Find the best days for your hike!</p>
+    </header>
+
+    <main>
+        <section id="input-section">
+            <h2>Your Preferences</h2>
+            <form id="prefs-form">
+                <div class="form-group">
+                    <label for="location">Location (City or Zip):</label>
+                    <input type="text" id="location" name="location" required placeholder="e.g., Boulder, CO">
+                </div>
+                <div class="form-group pref-group">
+                    <label for="minTemp">Min Temp (°C):</label>
+                    <input type="number" id="minTemp" name="minTemp" value="5">
+
+                    <label for="maxTemp">Max Temp (°C):</label>
+                    <input type="number" id="maxTemp" name="maxTemp" value="25">
+                </div>
+                 <div class="form-group pref-group">
+                    <label for="maxWind">Max Wind (m/s):</label>
+                    <input type="number" id="maxWind" name="maxWind" value="10">
+
+                    <label for="maxPrecip">Max Precip Chance (%):</label>
+                    <input type="number" id="maxPrecip" name="maxPrecip" value="30" max="100" min="0">
+                 </div>
+
+                <button type="submit">Find Good Hiking Days</button>
+            </form>
+        </section>
+
+        <section id="results-section">
+            <h2>Forecast Results for <span id="result-location">...</span></h2>
+             <div id="loading" style="display: none;">Loading...</div>
+             <div id="error-message" class="error" style="display: none;"></div>
+            <div id="forecast-results">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Prototype for Hiker's Weather Interview</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

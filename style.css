@@ -1,0 +1,202 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50; /* Hiker green */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#input-section, #results-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: calc(100% - 22px); /* Adjust for padding/border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style preference inputs side-by-side */
+.pref-group {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr; /* Label Input Label Input */
+    gap: 10px;
+    align-items: center;
+}
+.pref-group label {
+    margin-bottom: 0; /* Remove bottom margin for grid alignment */
+    text-align: right;
+    padding-right: 5px;
+}
+.pref-group input {
+    width: 80px; /* Fixed width for number inputs */
+}
+
+
+button {
+    background-color: #FF9800; /* Exciting orange */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+#loading {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+.error {
+    color: #D32F2F; /* Red for errors */
+    background-color: #FFCDD2;
+    border: 1px solid #D32F2F;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+#forecast-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+.forecast-card:hover {
+    transform: translateY(-3px);
+}
+
+.forecast-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recommendation {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.recommendation.good {
+    background-color: #C8E6C9; /* Light Green */
+    color: #2E7D32; /* Dark Green */
+    border: 1px solid #A5D6A7;
+}
+
+.recommendation.bad {
+    background-color: #FFCDD2; /* Light Red */
+    color: #C62828; /* Dark Red */
+    border: 1px solid #EF9A9A;
+}
+
+.reasons {
+    font-size: 0.85em;
+    color: #C62828; /* Dark Red */
+    margin-top: 8px;
+    list-style-type: none;
+    padding-left: 0;
+}
+.reasons li::before {
+    content: "⚠️ "; /* Warning sign */
+}
+
+
+/* Optional: Add basic details display */
+.details-list {
+    font-size: 0.9em;
+    color: #555;
+    max-height: 150px; /* Limit height */
+    overflow-y: auto;  /* Add scroll if needed */
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+.details-list li {
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 3px;
+}
+.details-list li.bad-period {
+    background-color: rgba(255, 205, 210, 0.5); /* Faint red background */
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #eee;
+}
